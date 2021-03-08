@@ -1,0 +1,48 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/pro-layout": "^6.5.0",
+    "@types/recoil": "^0.0.1",
+    "@umijs/preset-react": "1.x",
+    "axios": "^0.21.1",
+    "recoil": "^0.1.2",
+    "umi": "^3.3.9"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.3",
+    "@types/axios": "^0.14.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@umijs/test": "^3.3.9",
+    "autoprefixer": "^9",
+    "lint-staged": "^10.0.7",
+    "postcss": "^7",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.3",
+    "prettier": "^2.2.0",
+    "react": "17.x",
+    "react-dom": "17.x",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "typescript": "^4.1.2",
+    "yorkie": "^2.0.0"
+  }
+}
